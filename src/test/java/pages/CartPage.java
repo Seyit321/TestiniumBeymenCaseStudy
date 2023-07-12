@@ -14,7 +14,7 @@ public class CartPage extends BasePage {
     By PRODUCT_QUANTITY = By.id("quantitySelect0-key-0");
     By QUANTITY_COUNT = By.xpath(".//*[contains(@id, 'quantity')]//option");
     By EMPTY_CART_POPUP = By.id("emtyCart");
-    By REMOVE_ITEM = By.id("removeCartItemBtn0-key-0");
+    By REMOVE_BTN = By.id("removeCartItemBtn0-key-0");
     By CART_PAGE_HEADER = By.className("m-basket__header--title");
 
     public CartPage(WebDriver driver) {
@@ -29,7 +29,6 @@ public class CartPage extends BasePage {
         return findElement(PRODUCT_PRICE).getText();
     }
 
-
     public void changeQuantity(String quantity) {
         List<WebElement> quantityCount = findElements(QUANTITY_COUNT);
         if (quantityCount.size() > 1) {
@@ -39,7 +38,7 @@ public class CartPage extends BasePage {
     }
 
     public void removeItem() {
-        click(REMOVE_ITEM);
+        click(REMOVE_BTN);
     }
 
     public boolean isEmptyCartPopupVisible() {
