@@ -27,18 +27,19 @@ public class BeymenTest extends BaseTest {
         logger.info("Homepage is checked successfully!");
 
         logger.info("Get category name from excel file and search the category");
-        String firstItem = String.valueOf(basePage.getExcelData(0,0));
-        String secondItem = String.valueOf(basePage.getExcelData(0,1));
+        String firstItem = String.valueOf(basePage.getExcelData(0, 0));
+        String secondItem = String.valueOf(basePage.getExcelData(0, 1));
         homePage.fillSearchBox(firstItem);
         homePage.clearSearchBox();
         homePage.fillSearchBox(secondItem);
-        categoryPage =  homePage.searchItem();
+        categoryPage = homePage.searchItem();
         basePage.sleep(2000);
-        Assertions.assertEquals(secondItem, categoryPage.searchedCategoryInfo(), "The search result is not equal to expected value");
+        Assertions.assertEquals(secondItem, categoryPage.searchedCategoryInfo(),
+                "The search result is not equal to expected value");
         logger.info("Desired category page opened successfully!");
 
         logger.info("Select random product and write product info to txt file");
-        productPage =  categoryPage.selectRandomProduct();
+        productPage = categoryPage.selectRandomProduct();
         productPage.selectSize();
         String productPrice = productPage.getProductPrice();
         String productDesc = productPage.getProductDescription();
@@ -59,8 +60,6 @@ public class BeymenTest extends BaseTest {
         cartPage.removeItem();
         Assertions.assertTrue(cartPage.isEmptyCartPopupVisible(), "Cart is not empty!");
         logger.info("Quantity changed and item removed from cart successfully!");
-
-
     }
 
 }
