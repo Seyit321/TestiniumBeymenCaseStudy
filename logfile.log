@@ -1,0 +1,10 @@
+2023-07-12 15:00:14,809 INFO  [BaseTest] Go to Beymen homepage and check if the homepage is opened 
+2023-07-12 15:00:16,521 INFO  [BaseTest] Homepage is checked successfully! 
+2023-07-12 15:00:16,522 INFO  [BaseTest] Get category name from excel file and search the category 
+2023-07-12 15:00:21,850 INFO  [BaseTest] Desired category page opened successfully! 
+2023-07-12 15:00:21,851 INFO  [BaseTest] Select random product and write product info to txt file 
+2023-07-12 15:00:24,999 INFO  [BaseTest] Random product was selected and product info written the txt file 
+2023-07-12 15:00:24,999 INFO  [BaseTest] Add item to cart and compare product price between cart and product page 
+2023-07-12 15:00:28,652 INFO  [BaseTest] İtem added to cart and prices compared successfully! 
+2023-07-12 15:00:28,653 INFO  [BaseTest] Change product quantity and remove item from cart 
+2023-07-12 15:00:29,504 INFO  [BaseTest] Quantity changed and item removed from cart successfully! 
