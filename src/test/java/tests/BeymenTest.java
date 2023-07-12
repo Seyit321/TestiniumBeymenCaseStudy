@@ -15,8 +15,7 @@ public class BeymenTest extends BaseTest {
     ProductPage productPage;
 
     @Test
-
-    public void testItemAddedToCart() throws IOException {
+    public void beymenTest() throws IOException {
         logger.info("Go to Beymen homepage and check if the homepage is opened");
         basePage = new BasePage(driver);
         homePage = new HomePage(driver);
